@@ -22,6 +22,7 @@ O projeto de implementação de ferramentas foi dividido em 3 etapas, cada uma c
 - **Foco da ferramenta:** Computação sob demanda (Pay-per-use).
 - **Descrição de caso de uso:** Atualmente, a empresa mantém um servidor dedicado apenas para processar notificações de pedidos e envio de e-mails transacionais. A proposta é migrar essa função para o **AWS Lambda**. Com isso, eliminamos o servidor fixo. O código rodará apenas quando um evento ocorrer (ex: cliente finalizou a compra), e a cobrança será feita por milissegundos de execução. Se não houver vendas, o custo é zero.
 
+```mermaid
 graph TD
     User(Farmacêuticos/Clientes) -->|Acessam| ALB(Application Load Balancer)
     
@@ -44,6 +45,7 @@ graph TD
     end
 
     classDef cost stroke:#0f0,stroke-width:4px;
+```
     
 ## Conclusão
 A implementação de ferramentas na empresa **Abstergo Industries** tem como esperado **a redução dos custos operacionais (OpEx) em cerca de 40%, além de aumentar a elasticidade da infraestrutura**, o que aumentará a eficiência e a produtividade da empresa. Recomenda-se a continuidade da utilização das ferramentas implementadas e a busca por novas tecnologias, como o uso de **Spot Instances** para processamento de dados de pesquisa farmacêutica, visando economias ainda maiores.
